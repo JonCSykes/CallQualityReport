@@ -1,6 +1,7 @@
 module sandbox/AssemblyAI-Test
 
 go 1.22
+
 require (
 	github.com/AssemblyAI/assemblyai-go-sdk v1.9.0
 	github.com/invopop/jsonschema v0.13.0
