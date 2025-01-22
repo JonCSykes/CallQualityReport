@@ -31,7 +31,7 @@ type CallAnalysis struct {
 type Performance struct {
 	EmpathyAndEmotionalIntelligence float64 `json:"empathy_and_emotional_intelligence"`
 	Professionalism                 float64 `json:"professionalism"`
-	ProblemSolvingSkills            float64 `json:"problem_solving
+	ProblemSolvingSkills float64 `json:"problem_solving
 _skills"`
 	CommunicationClarity    float64 `json:"communication_clarity"`
 	CustomerCentricApproach float64 `json:"customer_centric_approach"`
@@ -59,7 +59,6 @@ func CreateReport(name, transcript string) *Report {
 		"OPENAI_PROJECT_ID": os.Getenv("OPENAI_PROJECT_ID"),
 	}
 
-	// Setting environment variables
 	for key, value := range envVars {
 		err := os.Setenv(key, value)
 		if err != nil {

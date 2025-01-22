@@ -1,5 +1,4 @@
 # Rules for Creating a Call Quality Report for Customer Service Call Transcriptions
-
 ## General Guidelines
 1. **Maintain Objectivity:**
     - Provide an unbiased evaluation based on the content of the call transcription.

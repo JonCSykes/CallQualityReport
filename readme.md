@@ -4,6 +4,7 @@ This project analyzes call center audio files, generates transcripts, and create
 
 ## Prerequisites
 
+
 - Git (https://git-scm.com/downloads)
 - Go 1.20 or later (https://golang.org/dl/)
 - An AssemblyAI API key (https://assemblyai.com)

@@ -1,5 +1,4 @@
 # Customer Service Call Analysis Report
-
 ## Overview
 
 **Summary:**
