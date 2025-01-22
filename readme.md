@@ -4,11 +4,10 @@ This project analyzes call center audio files, generates transcripts, and create
 
 ## Prerequisites
 
-- Git (https://git-scm.com/downloads)
-- Go 1.20 or later (https://golang.org/dl/)
-- An AssemblyAI API key (https://assemblyai.com)
-- An OpenAI API key, Project ID, and configured Assistant (https://platform.openai.com)
-
+- Install git (https://git-scm.com/downloads)
+- Install Go 1.20 or later (https://golang.org/dl/)
+- Get an AssemblyAI API key (https://assemblyai.com)
+- Get an OpenAI API key, Project ID, and configured Assistant (https://platform.openai.com)
 
 ## Installation
 
@@ -50,3 +49,4 @@ The application will process each audio file in the audio directory, generate tr
 - `reports/`: Directory where the generated reports are saved.
 - `audio/`: Directory where the audio files to be processed are stored.
 - `report-template.md`: Template for generating the markdown reports.
+- `report-guidelines` : Provides detailed instructions and rules for creating call quality reports based on customer service call transcriptions. 
