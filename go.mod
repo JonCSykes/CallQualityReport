@@ -5,6 +5,7 @@ go 1.22
 require (
 	github.com/AssemblyAI/assemblyai-go-sdk v1.9.0
 	github.com/invopop/jsonschema v0.13.0
+	github.com/joho/godotenv v1.5.1
 	github.com/openai/openai-go v0.1.0-alpha.43
 )
 

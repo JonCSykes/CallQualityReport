@@ -7,10 +7,17 @@ import (
 	"os"
 
 	aai "github.com/AssemblyAI/assemblyai-go-sdk"
+	"github.com/joho/godotenv"
 )
 
 func main() {
-	apiKey := "5d8d209eb0e94fe68ce1de241d6fc4f7"
+
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
+
+	apiKey := os.Getenv("ASSEMBLYAI_API_KEY")
 	client := aai.NewClient(apiKey)
 
 	ctx := context.Background()

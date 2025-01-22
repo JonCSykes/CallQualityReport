@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"context"
 	"encoding/json"
-	"fmt"
 	"html/template"
 	"log"
 	"os"
@@ -56,8 +55,8 @@ var CallAnalysisSchema = GenerateSchema[CallAnalysis]()
 
 func CreateReport(name, transcript string) *Report {
 	envVars := map[string]string{
-		"OPENAI_API_KEY":    "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",
-		"OPENAI_PROJECT_ID": "proj_R6hM9jOWrXtlX97bmiFS9BFK",
+		"OPENAI_API_KEY":    os.Getenv("OPENAI_API_KEY"),
+		"OPENAI_PROJECT_ID": os.Getenv("OPENAI_PROJECT_ID"),
 	}
 
 	// Setting environment variables
@@ -66,16 +65,14 @@ func CreateReport(name, transcript string) *Report {
 		if err != nil {
 			log.Fatalf("Failed to set environment variable %s: %v", key, err)
 		}
-		fmt.Printf("Set %s=%s\n", key, value)
 	}
 
 	// Verifying environment variables
 	for key := range envVars {
-		value, exists := os.LookupEnv(key)
+		_, exists := os.LookupEnv(key)
 		if !exists {
 			log.Fatalf("Environment variable %s is not set", key)
 		}
-		fmt.Printf("%s=%s\n", key, value)
 	}
 
 	callAnalysis := Analyze(transcript)
